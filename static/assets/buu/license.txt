@@ -1,0 +1,11 @@
+Model Information:
+* title:	Buu
+* source:	https://sketchfab.com/3d-models/buu-07d052dd19fc4ecfa5a561d1ec485fd5
+* author:	Boujo (https://sketchfab.com/Boujo)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Buu" (https://sketchfab.com/3d-models/buu-07d052dd19fc4ecfa5a561d1ec485fd5) by Boujo (https://sketchfab.com/Boujo) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

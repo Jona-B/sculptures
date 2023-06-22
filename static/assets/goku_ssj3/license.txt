@@ -1,0 +1,11 @@
+Model Information:
+* title:	Goku ssj3
+* source:	https://sketchfab.com/3d-models/goku-ssj3-fac7a1dbe21b480ca08d7c60b1823580
+* author:	Boujo (https://sketchfab.com/Boujo)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Goku ssj3" (https://sketchfab.com/3d-models/goku-ssj3-fac7a1dbe21b480ca08d7c60b1823580) by Boujo (https://sketchfab.com/Boujo) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
