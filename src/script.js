@@ -3,17 +3,17 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 function buu() {
-  // scène, caméra, rendu
+  // scène, caméra, renderer
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.querySelector('.buu').appendChild(renderer.domElement);
 
-  // background
+  // background color
   renderer.setClearColor(0x151515);
 
-  // Modèle 3D, avec Scaniverse
+  // Modèle 3D
   var loader = new GLTFLoader();
   loader.load('./assets/buu/scene.gltf', function (gltf) {
     var model = gltf.scene;
@@ -62,20 +62,13 @@ function goku_ssj3() {
         scene.add(model);
     });
 
-    var clock = new THREE.Clock();
-    var rotationSpeed = 0.02;
-    function animateModel() {
-        var delta = clock.getDelta();
-        model.rotation.y += rotationSpeed * delta;
-    }
-
     camera.position.y = 0.6;
     camera.position.z = 0;
 
     // Contrôles
     var controls = new OrbitControls(camera, renderer.domElement);
-    controls.autoRotate = true; // Activation de la rotation automatique
-    controls.autoRotateSpeed = 10.0; // Augmentation de la vitesse de rotation automatique
+    controls.autoRotate = true; // Activation de la rotation
+    controls.autoRotateSpeed = 10.0; // Augmentation de la vitesse de rotation
     controls.enableZoom = false; // Désactivation du zoom
     controls.minPolarAngle = Math.PI / 2;
     controls.maxPolarAngle = Math.PI / 2;
@@ -123,7 +116,6 @@ function dragon_radar() {
     controls.autoRotateSpeed = 10.0; // Augmentation de la vitesse de rotation automatique
     controls.minPolarAngle = Math.PI / 2;
     controls.maxPolarAngle = Math.PI / 2;
-
 
     var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
