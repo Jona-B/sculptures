@@ -3,24 +3,23 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 function buu() {
-  // Initialisation de la scène, de la caméra et du rendu
+  // scène, caméra, rendu
   var scene = new THREE.Scene();
   var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.querySelector('.buu').appendChild(renderer.domElement);
 
-  // Changer la couleur du fond
+  // background
   renderer.setClearColor(0x151515);
 
-  // Chargement du modèle 3D
+  // Modèle 3D
   var loader = new GLTFLoader();
   loader.load('./assets/buu/scene.gltf', function (gltf) {
     var model = gltf.scene;
     model.position.x = 0.04;
     scene.add(model);
   });
-
 
   // Position de la caméra
   camera.position.y = 0.6;
@@ -33,10 +32,9 @@ function buu() {
   controls.minPolarAngle = Math.PI / 2;
   controls.maxPolarAngle = Math.PI / 2;
 
-  // Boucle d'animation
   function animate() {
     requestAnimationFrame(animate);
-    controls.update(); // Mettre à jour les contrôles d'orbite
+    controls.update();
     renderer.render(scene, camera);
   }
 
@@ -47,17 +45,15 @@ buu();
 
 
 function goku_ssj3() {
-    // Initialisation de la scène, de la caméra et du rendu
+
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000);
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.querySelector('.goku_ssj3').appendChild(renderer.domElement);
   
-    // Changer la couleur du fond
     renderer.setClearColor(0xffffff);
   
-    // Chargement du modèle 3D
     var loader = new GLTFLoader();
     loader.load('./assets/goku_ssj3/scene.gltf', function (gltf) {
       var model = gltf.scene;
@@ -67,17 +63,15 @@ function goku_ssj3() {
     });
 
     var clock = new THREE.Clock();
-    var rotationSpeed = 0.02; // Vitesse de rotation
+    var rotationSpeed = 0.02;
     function animateModel() {
       var delta = clock.getDelta();
       model.rotation.y += rotationSpeed * delta;
     }
   
-    // Position de la caméra
     camera.position.y = 0.6;
     camera.position.z = 0;
     
-  
     // Contrôles d'orbite
     var controls = new OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true; // Activation de la rotation automatique
@@ -88,10 +82,9 @@ function goku_ssj3() {
     controls.minAzimuthAngle = -Math.PI / 7; // Limite de rotation horizontale à gauche
     controls.maxAzimuthAngle = Math.PI / 2; // Limite de rotation horizontale à droite
     
-    // Boucle d'animation
     function animate() {
       requestAnimationFrame(animate);
-      controls.update(); // Mettre à jour les contrôles d'orbite
+      controls.update(); 
       renderer.render(scene, camera);
     }
   
@@ -103,7 +96,7 @@ function goku_ssj3() {
 
 
   function dragon_radar() {
-    // Initialisation de la scène, de la caméra et du rendu
+
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
     var renderer = new THREE.WebGLRenderer();
@@ -113,7 +106,6 @@ function goku_ssj3() {
     // Changer la couleur du fond
     renderer.setClearColor(0x151515);
   
-    // Chargement du modèle 3D
     var loader = new GLTFLoader();
     loader.load('./assets/dragon_radar/scene.gltf', function (gltf) {
       var model = gltf.scene;
@@ -121,12 +113,10 @@ function goku_ssj3() {
       scene.add(model);
     });
   
-    // Position de la caméra
     camera.position.x = -1;
     camera.position.y = 1;
     camera.position.z = 6;
 
-  
     // Contrôles d'orbite
     var controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false; // Désactivation du zoom
@@ -136,16 +126,13 @@ function goku_ssj3() {
     controls.maxPolarAngle = Math.PI / 2;
     
   
-    // Ajouter une lumière ambiante
     var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
-    // Ajouter une lumière directionnelle
     var directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
     directionalLight.position.set(1, 1, 1);
     scene.add(directionalLight);
 
-    // Boucle d'animation
     function animate() {
       requestAnimationFrame(animate);
       controls.update(); // Mettre à jour les contrôles d'orbite
@@ -159,23 +146,21 @@ function goku_ssj3() {
 
 
     function luffy() {
-        // Initialisation de la scène, de la caméra et du rendu
+
         var scene = new THREE.Scene();
         var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
         var renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.querySelector('.luffy').appendChild(renderer.domElement);
     
-        // Changer la couleur du fond
-        renderer.setClearColor(0x393535);
+        // // Changer la couleur du fond
+        // renderer.setClearColor(0x393535);
     
-        // Load the background image texture
+        // Background image texture
         var textureLoader = new THREE.TextureLoader();
         textureLoader.load('./img/one_piece_bg.jpg', function (texture) {
-        // Set the image as the background
         scene.background = texture;
     
-        // Chargement du modèle 3D
         var loader = new GLTFLoader();
         loader.load('./assets/luffy/scene.gltf', function (gltf) {
             var model = gltf.scene;
@@ -183,7 +168,6 @@ function goku_ssj3() {
             scene.add(model);
         });
     
-        // Position de la caméra
         camera.position.y = 0.6;
         camera.position.z = 0;
     

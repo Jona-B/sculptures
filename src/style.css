@@ -173,15 +173,15 @@
   }
 
   .goku_ssj3 {
-    width: 50%; /* Adjust the height as needed */
+    width: 50%;
   }
 
   .dragon_radar{
-    height: 700px; /* Adjust the height as needed */
+    height: 700px;
   }
 
   .luffy{
-    height: 500px; /* Adjust the height as needed */
+    height: 500px;
     
   }
   
@@ -300,6 +300,7 @@ ul{
 	margin:auto;
 }
 
+
 .location_text{
     color: #ffffff;
     position: absolute;
@@ -310,10 +311,6 @@ ul{
     padding: 40px;
     padding-top: 300px;
 
-}
-
-.phone_number img{
-    color: #ffffff;
 }
 
 .sticky-menu {
